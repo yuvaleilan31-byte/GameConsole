@@ -40,7 +40,7 @@ namespace GameConsole.Pages
                     Console.WriteLine("The passwords are not the same. Try again.");
                 }
                 try{
-                    UserDB.Register(name, userName, pass);
+                    UserDB.Register(name, userName, pass); 
                     break;
                 }
                 catch
