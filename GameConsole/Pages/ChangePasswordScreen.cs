@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GameConsole.Base;
 using GameConsole.Data;
+using GameConsole.Models;
 namespace GameConsole.Pages
 {
     internal class ChangePasswordScreen:Screen
@@ -26,7 +27,8 @@ namespace GameConsole.Pages
                 }
                 try
                 {
-                    UserDB.Update = pass;
+                    User temp = new User(ConsoleGame.user.Name, ConsoleGame.user.UserName, pass);
+                    UserDB.Update(temp);
                     break;
                 }
                 catch

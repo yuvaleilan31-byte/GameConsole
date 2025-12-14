@@ -37,7 +37,16 @@ namespace GameConsole.Pages
                     Console.WriteLine("The user has been successfully logged in");
                     break;
                 }
-                Console.WriteLine("Error: something wrong, try again.");
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine("Error: something wrong, press anything try again or press \"R\" to register.");
+                Console.ResetColor();
+                var k = Console.ReadKey();
+                if((string)(k) == "r" || k == "R")
+                {
+                    RegisterScreen register = new RegisterScreen();
+                    register.Show();
+                }
+                
                 
             }
            

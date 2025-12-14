@@ -5,7 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace GameConsole.Models;
+//namespace GameConsole.Models;
+using GameConsole.Pages;
+using GameConsole.Models;
+
+
 
 namespace GameConsole.Pages
 {
@@ -37,7 +41,9 @@ namespace GameConsole.Pages
                     string pass2 = Console.ReadLine();
                     if (pass == pass2)
                         break;
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.WriteLine("The passwords are not the same. Try again.");
+                    Console.ResetColor();
                 }
                 try{
                     UserDB.Register(name, userName, pass); 
@@ -45,7 +51,9 @@ namespace GameConsole.Pages
                 }
                 catch
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.WriteLine("A user with that username already exists. Try again.");
+                    Console.ResetColor();
                 }
             }
         }

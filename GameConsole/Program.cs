@@ -2,7 +2,7 @@
 using GameConsole.Interfaces;
 using GameConsole.Pages;
 using System.Xml.Serialization;
-using GameConsole.ConsoleGame;
+//using GameConsole.ConsoleGame;
 
 namespace GameConsole
 {
