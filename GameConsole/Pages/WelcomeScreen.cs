@@ -14,12 +14,14 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             string text = "Welcome to the game comsole!";
             CenterText(text);
             CenterText("press any key to continue");
             Console.ReadKey();
             Screen next  = new MainMenu();
             next.Show();
+            Console.ResetColor();
         }
 
     }

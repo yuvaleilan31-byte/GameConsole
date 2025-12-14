@@ -18,8 +18,10 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+            Console.BackgroundColor = ConsoleColor.Blue;
             CenterText("Name: " + user.Name);
             CenterText("User name: " + user.UserName);
+            Console.ResetColor();
         }
     }
 }

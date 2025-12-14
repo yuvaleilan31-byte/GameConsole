@@ -17,17 +17,20 @@ namespace GameConsole.Base
         }
         public virtual void Show()
         {
-
             Console.Clear();
+            // Console.BackgroundColor = ConsoleColor.DarkCyan;
             CenterText(Title);
             
         }
 
-
         public void CenterText(string text)
         {
             Console.SetCursorPosition(Console.WindowTop + Console.WindowWidth / 2 - text.Length / 2, Console.CursorTop);
+            Console.BackgroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine(text);
+            Console.ResetColor();
         }
+
+        public virtual void BackColor() { }
     }
 }
