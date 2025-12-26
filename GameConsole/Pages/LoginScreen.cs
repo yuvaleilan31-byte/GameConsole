@@ -22,9 +22,11 @@ namespace GameConsole.Pages
         {
             User user = null;
             Boolean toRegister = false;
-            base.Show();
+            
             while (true)
             {
+                Console.Clear();
+                base.Show();
                 CenterText("Enter the details below:");
                 //Console.ReadKey();
                 Console.WriteLine("User name: ");
@@ -42,11 +44,15 @@ namespace GameConsole.Pages
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.WriteLine("Error: something wrong, press anything try again or press \"R\" to register.");
                 Console.ResetColor();
-                var k = Console.ReadKey();
-                string l = k.ToString();
-                if (l == "r" || l == "R")
+                //var k = Console.ReadKey();
+                //string l = k.ToString();
+                string answer = Console.ReadLine();
+
+
+                if (answer == "r" || answer == "R")
                 {
                     Console.WriteLine("register now");
+
                     RegisterScreen register = new RegisterScreen();
                     register.Show();
                     toRegister = true;

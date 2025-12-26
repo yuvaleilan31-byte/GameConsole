@@ -1,8 +1,10 @@
 ﻿using GameConsole.Base;
 using GameConsole.Interfaces;
+using GameConsole.Models;
 using GameConsole.Pages;
 using System.Xml.Serialization;
-//using GameConsole.ConsoleGame;
+using GameConsole.Data;
+
 
 namespace GameConsole
 {
@@ -10,6 +12,12 @@ namespace GameConsole
     {
         static void Main(string[] args)
         {
+            // מוסיפים נתונים לרשימה כדי לדמות מסד נתונים אמיתי ולאפשר התחברות לחשבון
+            UserDB.UserList.Add(new User("Yuris", "TheBestPlayer", "veryStrongPassword"));
+            UserDB.UserList.Add(new User("Yuris2", "TheBestPlayer2", "veryStrongPassword2"));
+            UserDB.UserList.Add(new User("Yuris3", "TheBestPlayer3", "veryStrongPassword3"));
+            UserDB.UserList.Add(new User("Yuris4", "TheBestPlayer4", "veryStrongPassword4"));
+            UserDB.UserList.Add(new User("Yuris5", "TheBestPlayer5", "veryStrongPassword5"));
             ImportContext ConsoleGame;
             //        List<IGamePlay> games = new List<IGamePlay>();
             //        games.Add(new Games.TetrisGame());

@@ -13,8 +13,9 @@ namespace GameConsole.Pages
     {
         public HistoryMenu():base("HistoryMenu")
         { 
-           Add(ConsoleGame.user.);
-            
+            Add(new MenuItem("Sort scores by max score", new SortHistoryByScoreScreen()));
+            Add(new MenuItem("Sort scores by game name", new SortHistoryGameByNameScreen()));
+            Add(new MenuItem("Show last game's score", new ShowLastGaneScreen()));
         }
     }
 }

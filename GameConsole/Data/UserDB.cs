@@ -12,6 +12,7 @@ namespace GameConsole.Data
     internal class UserDB
     {
         public static List<User> UserList = new List<User>();
+        
         public UserDB(){}
         public static User Login(string UserName, string pass)
         {
