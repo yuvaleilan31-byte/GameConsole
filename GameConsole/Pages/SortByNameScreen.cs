@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameConsole.Models;
 
 namespace GameConsole.Pages
 {
@@ -13,7 +14,7 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
-            var GameName = ConsoleGame.user.AllScores.OrderBy(GameName => GameName.Name);
+            var GameName = User.AllScores.OrderBy(GameName => GameName.Name);
             foreach (var Name in GameName)
             {
                 Console.WriteLine(GameName);

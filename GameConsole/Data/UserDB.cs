@@ -16,7 +16,9 @@ namespace GameConsole.Data
         public UserDB(){}
         public static User Login(string UserName, string pass)
         {
-            return UserList.FirstOrDefault(u =>  u.UserName ==  UserName && u.Password == pass);
+
+            User user =  UserList.FirstOrDefault(u =>  u.UserName ==  UserName && u.Password == pass);
+            return user;
         }
 
         public static void Register(string name, string userName, string pass)

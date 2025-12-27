@@ -33,7 +33,7 @@ namespace GameConsole.Pages
                 string name = Console.ReadLine();
                 Console.WriteLine("Password: ");
                 string pass = Console.ReadLine();
-                user = UserDB.Login(userName, password);
+                user = UserDB.Login(name, pass);
                 if (user != null)
                 {
                     Console.WriteLine("The user has been successfully logged in");

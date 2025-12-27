@@ -12,12 +12,24 @@ namespace GameConsole
     {
         static void Main(string[] args)
         {
-            // מוסיפים נתונים לרשימה כדי לדמות מסד נתונים אמיתי ולאפשר התחברות לחשבון
+            // מוסיפים נתונים לרשימת המשתמשים כדי לדמות מסד נתונים אמיתי ולאפשר התחברות לחשבון
             UserDB.UserList.Add(new User("Yuris", "TheBestPlayer", "veryStrongPassword"));
             UserDB.UserList.Add(new User("Yuris2", "TheBestPlayer2", "veryStrongPassword2"));
             UserDB.UserList.Add(new User("Yuris3", "TheBestPlayer3", "veryStrongPassword3"));
             UserDB.UserList.Add(new User("Yuris4", "TheBestPlayer4", "veryStrongPassword4"));
             UserDB.UserList.Add(new User("Yuris5", "TheBestPlayer5", "veryStrongPassword5"));
+            UserDB.UserList.Add(new User("1", "2", "3"));
+
+            // מוסיפים נתונים לרשימת התוצאות כדי לדמות מסד נתונים אמיתי ולאפשר צפייה בהיסטוריית המשחקים
+            User.UserList.Add(new User("Yuris", "TheBestPlayer", "veryStrongPassword"));
+            User.UserList.Add(new User("Yuris2", "TheBestPlayer2", "veryStrongPassword2"));
+            User.UserList.Add(new User("Yuris3", "TheBestPlayer3", "veryStrongPassword3"));
+            User.UserList.Add(new User("Yuris4", "TheBestPlayer4", "veryStrongPassword4"));
+            User.UserList.Add(new User("Yuris5", "TheBestPlayer5", "veryStrongPassword5"));
+            User.UserList.Add(new User("1", "2", "3"));
+
+
+
             ImportContext ConsoleGame;
             //        List<IGamePlay> games = new List<IGamePlay>();
             //        games.Add(new Games.TetrisGame());
@@ -37,6 +49,7 @@ namespace GameConsole
             //mainScreen = new WelcomeScreen();
             //mainScreen.Show();
             //Console.ReadKey();
+            var x = UserDB.UserList[0];
             ConsoleGame game  = new ConsoleGame();
             game.StartApp();
 

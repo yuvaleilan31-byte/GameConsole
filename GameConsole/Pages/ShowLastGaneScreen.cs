@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameConsole.Models;
 
 namespace GameConsole.Pages
 {
@@ -14,7 +15,7 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
-            var recebt_score = ConsoleGame.user.AllScores.OrderByDescending(score => score.Date).First();
+            var recebt_score = User.AllScores.OrderByDescending(score => score.Date).First();
 
             if (recebt_score != null) {
                 Console.WriteLine("The last game was:" + recebt_score);
