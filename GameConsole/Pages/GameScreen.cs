@@ -28,7 +28,7 @@ namespace GameConsole.Pages
             if (ConsoleGame.user.HighScore == null || newScore.Score > ConsoleGame.user.HighScore.Score) {
                 ConsoleGame.user.HighScore = newScore;
             }
-            User.AllScores.Add(newScore);
+            ConsoleGame.user.AllScores.Add(newScore);
 
         }
     }

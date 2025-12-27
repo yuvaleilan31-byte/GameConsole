@@ -18,8 +18,9 @@ namespace GameConsole.Base
         public virtual void Show()
         {
             Console.Clear();
-            // Console.BackgroundColor = ConsoleColor.DarkCyan;
+            Console.ForegroundColor = ConsoleColor.Red;
             CenterText(Title);
+            Console.ResetColor();
             
         }
 

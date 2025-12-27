@@ -23,10 +23,10 @@ namespace GameConsole.Pages
 
         public override void Show()
         {
-            base.Show();
             string name;
             string pass;
             string userName;
+            bool toLogin = false;
             while (true)
             {
                 
@@ -54,17 +54,29 @@ namespace GameConsole.Pages
                 }
                 catch
                 {
-                    UserDB.Register(name, userName, pass);
                     Console.ForegroundColor = ConsoleColor.DarkBlue;
-                    Console.WriteLine("A user with that username already exists. Try again.");
-                    Console.ReadKey();
+                    Console.WriteLine("A user with that username already exists. Try again or press \"l\" to login");
+
+                    string answer = Console.ReadLine();
+                    if (answer == "l" || answer == "L")
+                    {
+                        toLogin = true;
+                        LoginScreen login = new LoginScreen();
+                        login.Show();
+                        break;
+                    }
+
+
                     Console.ResetColor();
                 }
             }
-            User user = new User(name, userName, password);
-            ConsoleGame.user = user;
-            AfterLoginMenu afterLoginMenu = new AfterLoginMenu();
-            afterLoginMenu.Show();
+            if (!toLogin)
+            {
+                User user = new User(name, userName, password);
+                ConsoleGame.user = user;
+                AfterLoginMenu afterLoginMenu = new AfterLoginMenu();
+                afterLoginMenu.Show();
+            }
         }
     }
 }

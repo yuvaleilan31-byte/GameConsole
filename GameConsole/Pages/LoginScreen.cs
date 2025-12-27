@@ -51,8 +51,6 @@ namespace GameConsole.Pages
 
                 if (answer == "r" || answer == "R")
                 {
-                    Console.WriteLine("register now");
-
                     RegisterScreen register = new RegisterScreen();
                     register.Show();
                     toRegister = true;

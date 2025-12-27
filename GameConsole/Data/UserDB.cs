@@ -24,7 +24,7 @@ namespace GameConsole.Data
         public static void Register(string name, string userName, string pass)
         {
             Console.ReadKey();
-            var exist = UserList.FirstOrDefault(user => user.UserName == name);
+            var exist = UserList.FirstOrDefault(user => user.UserName == userName);
             if (exist == null && name != null && name != "" && userName != null && userName != "" && pass != null && pass != "")
                 UserList.Add(new User(name, userName, pass));
             else

@@ -2,9 +2,11 @@
 using GameConsole.Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace GameConsole.Pages
 {
@@ -15,12 +17,25 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
-            var scores = User.AllScores.OrderBy(score => score.Score);
+            var scores = ConsoleGame.user.AllScores.OrderByDescending(score => score.Score);
             if (scores != null)
             {
+                int i = 1;
                 foreach (var score in scores)
                 {
-                    Console.WriteLine(score);
+                    //.Pastel(Color.FromArgb(255, 215, 0)
+                    // string write = i.ToString() + ". Score: " + score.Score + ", game: " + score.Name;
+                    var color = ConsoleColor.White;
+                    if (i == 1)
+                        color = ConsoleColor.Yellow;
+                    else if (i == 2)
+                        color = ConsoleColor.DarkGray;
+                    else if (i == 3)
+                        color = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = color;
+                    Console.WriteLine(i.ToString() + ". Score: " + score.Score + ", game: " + score.Name);
+                    Console.ResetColor();
+                    i++;
                 }
             }
             else

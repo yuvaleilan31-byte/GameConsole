@@ -27,12 +27,13 @@ namespace GameConsole.Base
 
         public override void Show()
         {
-            base.Show();
+            
             CenterText("Choose Your Screen:");
             bool exit = false;
             int choose = 0;
             while (!exit)
             {
+                base.Show();
                 for (int i = 0; i < items.Count; i++)
                 {
                     CenterText($"{i + 1} - {items[i].DisplayName}");

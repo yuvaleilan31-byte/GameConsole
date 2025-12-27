@@ -14,7 +14,7 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
-            var GameName = User.AllScores.OrderBy(GameName => GameName.Name);
+            var GameName = ConsoleGame.user.AllScores.OrderByDescending(GameName => GameName.Name);
             foreach (var Name in GameName)
             {
                 Console.WriteLine(GameName);

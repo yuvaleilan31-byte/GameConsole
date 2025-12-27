@@ -15,10 +15,10 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
-            var recebt_score = User.AllScores.OrderByDescending(score => score.Date).First();
+            var recent_score = ConsoleGame.user.AllScores.OrderByDescending(score => score.Date).First();
 
-            if (recebt_score != null) {
-                Console.WriteLine("The last game was:" + recebt_score);
+            if (recent_score != null) {
+                Console.WriteLine("Game: " + recent_score.Name + ", score: " + recent_score.Score);
             }
             else
             {
