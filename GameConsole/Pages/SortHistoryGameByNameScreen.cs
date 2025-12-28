@@ -18,30 +18,12 @@ namespace GameConsole.Pages
         {
             base.Show();
 
-﻿using GameConsole.Base;
-using GameConsole.Models;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-namespace GameConsole.Pages
-{
-    internal class SortHistoryByScoreScreen:Screen
-    {
-        public SortHistoryByScoreScreen():base("History Name"){}
-
-        public override void Show()
-        {
-            base.Show();
-            var names = ConsoleGame.user.AllNames.OrderByDescending(name => name.Score);
+            var names = ConsoleGame.user.AllNames.OrderByDescending(name => name.name);
             if (scores != null)
             {
                 int i = 1;
-                foreach (var name in name)
+                foreach (var name in names)
                 {
                     //.Pastel(Color.FromArgb(255, 215, 0)
                     // string write = i.ToString() + ". Score: " + score.Score + ", game: " + score.Name;
