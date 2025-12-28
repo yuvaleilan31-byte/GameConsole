@@ -19,6 +19,7 @@ namespace GameConsole.Base
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.Blue;
             CenterText(Title);
             Console.ResetColor();
             

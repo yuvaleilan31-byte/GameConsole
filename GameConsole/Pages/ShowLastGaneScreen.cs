@@ -18,11 +18,11 @@ namespace GameConsole.Pages
             var recent_score = ConsoleGame.user.AllScores.OrderByDescending(score => score.Date).First();
 
             if (recent_score != null) {
-                Console.WriteLine("Game: " + recent_score.Name + ", score: " + recent_score.Score);
+                Console.WriteLine("Game: " + recent_score.Name + ", score: " + recent_score.Score + ", date: " + recent_score.Date);
             }
             else
             {
-                Console.WriteLine("You stil didn't played any game.");
+                Console.WriteLine("You didn't played any game yet.");
             }
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;

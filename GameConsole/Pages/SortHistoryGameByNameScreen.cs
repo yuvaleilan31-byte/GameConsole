@@ -17,13 +17,12 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
-            
 
 
-
-
-
-
+            // להשלים כאן קוד
+            //
+            //
+            //
 
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;

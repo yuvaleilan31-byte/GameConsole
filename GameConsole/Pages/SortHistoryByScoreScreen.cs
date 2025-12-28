@@ -33,7 +33,7 @@ namespace GameConsole.Pages
                     else if (i == 3)
                         color = ConsoleColor.DarkRed;
                     Console.ForegroundColor = color;
-                    Console.WriteLine(i.ToString() + ". Score: " + score.Score + ", game: " + score.Name);
+                    Console.WriteLine(i.ToString() + ". Score: " + score.Score + ", game: " + score.Name + ", date: " + score.Date);
                     Console.ResetColor();
                     i++;
                 }
