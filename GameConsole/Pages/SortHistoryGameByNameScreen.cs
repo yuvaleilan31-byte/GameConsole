@@ -36,6 +36,10 @@ namespace GameConsole.Pages
                 Console.WriteLine("You didn't played any game yet.");
             }
 
+            // להשלים כאן קוד
+            //
+            //
+            //
 
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
