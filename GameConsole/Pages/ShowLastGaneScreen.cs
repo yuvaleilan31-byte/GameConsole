@@ -10,7 +10,7 @@ namespace GameConsole.Pages
 {
     internal class ShowLastGaneScreen: Screen
     {
-        public ShowLastGaneScreen() : base("ShowLastGameScreen"){}
+        public ShowLastGaneScreen() : base("show last game's score"){}
 
         public override void Show()
         {

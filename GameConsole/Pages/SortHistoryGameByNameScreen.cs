@@ -14,7 +14,7 @@ namespace GameConsole.Pages
     internal class SortHistoryGameByNameScreen:Screen
     {
         public List<HighScore> Scores {  get; set; }
-        public SortHistoryGameByNameScreen():base("Sort History Game By Name Screen"){}
+        public SortHistoryGameByNameScreen():base("Sort history by name"){}
 
         public override void Show()
         {
@@ -25,8 +25,6 @@ namespace GameConsole.Pages
                 int i = 1;
                 foreach (var name in names)
                 {
-                    //.Pastel(Color.FromArgb(255, 215, 0)
-                    // string write = i.ToString() + ". Score: " + score.Score + ", game: " + score.Name;
                     Console.WriteLine(i.ToString() + ". Game: " + name.Name +  ", score: " + name.Score + ", date: " + name.Date);
                     i++;
                 }
@@ -35,12 +33,6 @@ namespace GameConsole.Pages
             {
                 Console.WriteLine("You didn't played any game yet.");
             }
-
-            // להשלים כאן קוד
-            //
-            //
-            //
-
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("\n\nPress any key to continue.");

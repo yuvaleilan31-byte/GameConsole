@@ -10,7 +10,7 @@ namespace GameConsole.Pages
 {
     internal class GameHistoryScreen:MenuScreen
     {
-        public List<HighScore> Scores { get; set; }
+        //public List<HighScore> Scores { get; set; }
         public GameHistoryScreen():base("Game History Screen")
         {
             Add(new MenuItem("Show last game's score", new ShowLastGaneScreen()));

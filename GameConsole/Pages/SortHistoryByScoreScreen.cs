@@ -12,7 +12,7 @@ namespace GameConsole.Pages
 {
     internal class SortHistoryByScoreScreen:Screen
     {
-        public SortHistoryByScoreScreen():base("History Score"){}
+        public SortHistoryByScoreScreen():base("Sort history by Score"){}
 
         public override void Show()
         {
